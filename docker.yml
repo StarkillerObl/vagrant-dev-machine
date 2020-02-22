@@ -1,0 +1,22 @@
+- name: Install docker
+  apt:
+    name: docker.io
+- name: Ensure that docker group exists
+  group:
+    name: docker 
+    state: present
+- name: Add user to docker group
+  user:
+    name: vagrant
+    groups: docker
+    shell: /bin/bash
+    append: yes
+# - name: Install docker-compose
+#   apt:
+#     name: docker-compose=1.17.2
+#     state: present
+#     update_cache: yes
+- name: Install docker-compose using pip
+  pip:
+    name: docker-compose
+    state: present
