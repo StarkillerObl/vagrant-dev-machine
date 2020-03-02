@@ -1,1 +1,4 @@
 .vagrant/
+vagrant-variables.rb
+ubuntu-bionic-18.04-cloudimg-console.log
+vagrant_ansible_inventory_default
